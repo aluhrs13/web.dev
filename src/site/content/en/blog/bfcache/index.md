@@ -362,7 +362,8 @@ As a result, it's best to avoid creating `window.opener` references. You can do 
 controlling it through
 [`window.postMessage()`](https://developer.mozilla.org/docs/Web/API/Window/postMessage)
 or directly referencing the window object, neither the opened window nor the
-opener will be eligible for the bfcache.
+opener will be eligible for the bfcache. For the same reason, pages loaded into an `iframe`
+are also not eligible for the bfcache.
 
 ### Always close open connections before the user navigates away
 
